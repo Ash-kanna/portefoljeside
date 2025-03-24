@@ -25,138 +25,118 @@
     </script>
     <script type="module">
         import '@material/web/common.js';
+
         import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-    
+
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
 </head>
 
 <body onload="applySavedPreferences()">
-    <!-- Hovedseksjon som inneholder navigasjonslinjen -->
-           <div class="navbar">  
-               <div class="logo-container">
-                   <a id="navbar__logo">Adea's Nettside</a>
-               </div>
-               <!-- Logo for nettsiden -->
-               <div class="navbar__container">
-                   <md-icon-button id="usage-anchor"><md-icon>menu</md-icon></md-icon-button>
-                   <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
-                    
-                        <md-menu-item> 
-                       <a href="#main-1" class="navbar__links">
-                       <div slot="headline">Hjem</div>
-                       </md-menu-item></a>
+<!-- Hovedseksjon som inneholder navigasjonslinjen -->
+<header style="height: 10vh; width: 100%;">
+    <div class="navbar">
+        <div style="margin:0 10px 0 10px; height: inherit; display: flex; align-content:center; width:calc(100% - 20px);">
+            <div class="logo-container">
+                <a id="navbar__logo">Adea's Nettside</a>
+            </div>
+            <!-- Logo for nettsiden -->
+            <div class="navbar__container">
+                <md-icon-button id="usage-anchor"><md-icon>menu</md-icon></md-icon-button>
+                <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
 
-                       <md-menu-item>
-                       <a href="#prosjekt" class="navbar__links">
-                        <div slot="headline">Projekter</div> 
-                       </md-menu-item></a>
-                       
-                       <md-menu-item>
-                       <a href=#kontakt class="navbar__links">
-                       <div slot="headline">Kontakt</div>
-                       </md-menu-item></a>
-                       
-                       <md-menu-item>
-                           <div slot="headline">
-                               <li class="navbar__textSize">
+                    <a href="#main-1" class="navbar__links">
+                        <md-menu-item>
+                            <div slot="headline">Hjem</div>
+                        </md-menu-item>
+                    </a>
+
+                    <a href="#prosjekt" class="navbar__links">
+                        <md-menu-item>
+                            <div slot="headline">Projekter</div>
+                        </md-menu-item></a>
+
+                    <a href=#kontakt class="navbar__links">
+                        <md-menu-item>
+                            <div slot="headline">Kontakt</div>
+                        </md-menu-item></a>
+
+                    <md-menu-item>
+                        <div slot="headline">
+                               <span class="navbar__textSize">
                                    <a>Text Size</a>
                                    <button class="button2" onclick="changeFontSize('increase')"> + </button>
                                    <button class="button2" onclick="changeFontSize('decrease')"> - </button>
-                               </li>
-                           </div>
-                       </md-menu-item>
-                   </md-menu>
-               </div>
-                
-                <script>
-                    function changeFontSize(action) {
-                        const body = document.body;
-                        const currentSize = window.getComputedStyle(body).fontSize;
-                        let newSize = parseFloat(currentSize);
-        
-                        if (action === 'increase') {
-                            newSize += 2; // Øk med 2 piksler
-                        } else {
-                            newSize -= 2; // Reduser med 2 piksler
-                        }
-        
-                        body.style.fontSize = newSize + 'px';
-                        localStorage.setItem('fontSize', newSize + 'px'); // Lagre tekststørrelse
-                    }
-        
-        
-                    function applySavedPreferences() {
-                        const savedFontSize = localStorage.getItem('fontSize');
-                        const savedLineHeight = localStorage.getItem('lineHeight');
-        
-                        if (savedFontSize) {
-                            document.body.style.fontSize = savedFontSize;
-                        }
-                    }
-                </script>     
-            </div>   
-
-    <main>
-        <!-- Hovedinnholdsområde -->
-        <div id="main-1"></div>
-        <section class="main__content" id="main-2">
-            <section>
-                <!-- Seksjon for informasjon om meg (adea) -->
-                <h2 class="overskrifter">Om meg</h2>
-                <p>
-                    Jeg heter Adea, og er 16 år gammel. Jeg er intresert i web- og 
-                    andre IT-utvikklingsrelaterte ting. Går nå på Hønefoss vgs for å utdanne
-                    meg innenfor IT-utvikkling. 
-                </p>
-                <header> </header>
-                <!-- Underrubrik for programmeringsspråk -->
+                               </span>
+                        </div>
+                    </md-menu-item>
+                </md-menu>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- Hovedinnholdsområde -->
+    <div id="main-1"></div>
+    <section class="main__content" id="main-2">
+        <section>
+            <!-- Seksjon for informasjon om meg (adea) -->
+            <h2 class="overskrifter">Om meg</h2>
+            <p>
+                Jeg heter Adea, og er 16 år gammel. Jeg er intresert i web- og
+                andre IT-utvikklingsrelaterte ting. Går nå på Hønefoss vgs for å utdanne
+                meg innenfor IT-utvikkling.
+            </p>
+            <header> </header>
+            <!-- Underrubrik for programmeringsspråk -->
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
                 <h4 id="h4__1">Programmerings språk jeg kan bruke:</h4>
                 <ul id="ul2">
                     <li>Python</li>
                     <li>HTML</li>
                     <li>CSS</li>
-                    <li>Javaskript</li>
+                    <li>Javascript</li>
                 </ul>
-            </section>
-
-            <section id="main__content">
-                <!-- Seksjon for prosjekter -->
-                <h2 class="overskrifter" id="prosjekt">Prosjekt</h2>
-                <h4>MHAI</h4>
-                <p id="p2"> M.H.A.I er kort for "Mental Healt Artifitial Intelligence". 
-                    Prosjektet begynnte ved starten av 2025.
-                    Hental Healt AI skal bli en AI-chatbot hvor forlk kan prate 
-                    med AI-en om hvordan de føler seg og få tips og råd som en/fler 
-                    psykolog/er har hjelpet Ai-en å forstå og gi. 
-                    Vis du vil lese mer om prosjektet M.H.A.I gå inn på 
-                    <a href="http://127.0.0.1:5500/Min_nettside/MHAI/Index.html"> 
-                        M.H.A.I.'s offesielle nettside.</a> </p>
-            </section>
-
-            <section id="kontakt">
-                <header id="header2"> </header>
-                <!-- Seksjon for kontaktinformasjon -->
-                <h2 class="overskrifter">Kontakt</h2>
-                <p> Opplever du problemer, eller har spørsmål? Ta kontakt med <a href="mailto:adea.hafnor@gmail.com">adea.hafnor@gmail.com</a>, for hjelp eller eventueller forbedringer eller klager.</p>
-            </section>
+            </div>
         </section>
 
-        <div id="main-3">
-            <section class="main__imge--container">
-                <!-- Bilde-seksjon for å vise en logo -->
-                <picture>
-                    <img src="bilder/mhai.png" alt="MHAI sin logo" />
-                </picture>
-            </section>
-        </div>
-    </main>
+        <section id="main__content">
+            <!-- Seksjon for prosjekter -->
+            <h2 class="overskrifter" id="prosjekt">Prosjekt</h2>
+            <h4>MHAI</h4>
+            <p id="p2"> M.H.A.I er kort for "Mental Healt Artifitial Intelligence".
+                Prosjektet begynnte ved starten av 2025.
+                Hental Healt AI skal bli en AI-chatbot hvor forlk kan prate
+                med AI-en om hvordan de føler seg og få tips og råd som en/fler
+                psykolog/er har hjelpet Ai-en å forstå og gi.
+                Vis du vil lese mer om prosjektet M.H.A.I gå inn på
+                <a href="http://127.0.0.1:5500/Min_nettside/MHAI/Index.html">
+                    M.H.A.I.'s offesielle nettside.</a> </p>
+        </section>
 
-    <!-- Kobler til en ekstern JavaScript-fil for funksjonalitet -->
-    <script type="module" src="Scripter/main.js"></script>
-    <footer>
-        <!-- Bunntekst med opphavsrettsinformasjon -->
-        <p>&copy; 2025 Min Portefølje.</p>
-    </footer>
+        <section id="kontakt">
+            <header id="header2"> </header>
+            <!-- Seksjon for kontaktinformasjon -->
+            <h2 class="overskrifter">Kontakt</h2>
+            <p> Opplever du problemer, eller har spørsmål? Ta kontakt med <a href="mailto:adea.hafnor@gmail.com">adea.hafnor@gmail.com</a>, for hjelp eller eventueller forbedringer eller klager.</p>
+        </section>
+    </section>
+
+    <div id="main-3">
+        <section class="main__imge--container">
+            <!-- Bilde-seksjon for å vise en logo -->
+            <picture>
+                <img src="bilder/mhai.png" alt="MHAI sin logo" />
+            </picture>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <!-- Bunntekst med opphavsrettsinformasjon -->
+    <p>&copy; 2025 Min Portefølje.</p>
+</footer>
+<!-- Kobler til en ekstern JavaScript-fil for funksjonalitet -->
+<script type="module" src="Scripter/main.js"></script>
 </body>
 </html>

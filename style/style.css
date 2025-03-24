@@ -53,7 +53,7 @@ footer {
     align-items: center; /* Sentrerer innholdet vertikalt */
     text-align: center;
     font-size: 3rem; /* Setter fontstørrelse */
-    transition: .3 ease;
+    transition: .3s ease;
     opacity: 100%;
 }
 
@@ -69,11 +69,10 @@ nav {
 
 /* Stil for navigasjonslinjen */
 .navbar {
-    height: auto; /* Høyden tilpasses innholdet */
     display: flex; /* Bruker flexbox for layout */
     z-index: 3; /* Setter z-indeksen for lagdeling */
     width: 100%; /* Setter bredden til 100% */
-    height: 11vh;
+    height: 11vh; /* Høyden tilpasses innholdet */
     top: 0;
     background-color: rgb(213, 251, 251);
     position: fixed; /* Fester navigasjonslinjen til toppen av vinduet */
@@ -89,8 +88,7 @@ nav {
     background-image: linear-gradient(to top, rgb(33, 182, 241) 0%, rgb(0, 0, 0) 100%); /* Setter gradientbakgrunn */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
     background-clip: text; /* Klipper bakgrunnen til teksten */
-    -webkit-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
-    -moz-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
+    color: transparent;
 }
 
 /* Stil for logoen i navigasjonslinjen */
@@ -98,8 +96,7 @@ nav {
     background-image: linear-gradient(to top, rgb(33, 182, 241) 0%, rgb(0, 0, 0) 100%); /* Setter gradientbakgrunn */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
     background-clip: text; /* Klipper bakgrunnen til teksten */
-    -webkit-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
-    -moz-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
+    color: transparent;
     position: relative; /* Setter posisjon til relativ */
     cursor: pointer; /* Endrer musepekeren til hånd når man holder over */
     text-decoration-skip-ink: none; /* Fjerner understrykning */
@@ -166,7 +163,6 @@ nav {
     justify-content: center; /* Sentrerer innholdet horisontalt */
     align-items: center; /* Sentrerer innholdet vertikalt */
     text-decoration: none; /* Fjerner understrykning fra teksten */
-    text-size-adjust: 50px;
     padding: 10px; /* Legger til padding på toppen/bunnen og venstre/høyre */
     margin: 5px;
     height: 100%; /* Setter høyden til 100% av foreldreelementet */
@@ -200,7 +196,7 @@ body {
 
 /* Stil for hovedinnholdet */
 .main__content {
-width: 100%; /* Setter bredden til 100% */
+    width: 100%; /* Setter bredden til 100% */
     min-height: fit-content; /* Setter minimum høyde til innholdets høyde */
 }
 
@@ -212,7 +208,6 @@ main {
     background-color: rgb(255, 255, 255); /* Setter bakgrunnsfarge til hvit */
     z-index: 0; /* Setter z-indeksen for lagdeling */
     width: calc(100% - 60px); /* Setter bredden til 100% */
-    max-width: 1500px; /* Setter maksimal bredde */
     min-height: fit-content; /* Setter minimum høyde til innholdets høyde */
     max-height: 1500px; /* Setter maksimal høyde */
     padding: 20px; /* Legger til padding */
@@ -235,25 +230,25 @@ main {
     background-size: 100%; /* Setter bakgrunnsstørrelse */
 }
 
-    /* Stil for tredje hovedseksjon */
+/* Stil for tredje hovedseksjon */
 #main-3 {
     display: block; /* Bruker blokkvisning */
     flex: 5%; /* Setter fleksibilitet */
 }
 
 /* Stil for en liste */
-#ul2 { 
+#ul2 {
+    display: inline-block;
+    text-align: left;
     position: relative; /* Setter posisjon til relativ */
     width: 50px; /* Setter bredde */
     height: 140px; /* Setter høyde */
     top: 20px; /* Setter avstand fra toppen */
-    left: 150px; /* Setter avstand fra venstre */
 }
 /* Stil for h4-elementet med ID h4__1 */
 #h4__1 {
     position: relative; /* Setter posisjon til relativ for å kunne bruke top/left */
     width: 100%; /* Setter bredden til 100% av foreldreelementet */
-    max-width: 500px; /* Setter maksimal bredde til 500px */
     height: 10px; /* Setter høyden til 10px */
     top: 20px; /* Setter avstand fra toppen */
     left: 0; /* Setter avstand fra venstre */
@@ -290,16 +285,16 @@ main {
 
 @media (min-width: 1200px) {
     h1, .h1 {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
-  }
- 
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
     h4, .h4 {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-  }
-  
+}
+
 
 /* Media query for skjermstørrelser opp til 1000px */
 @media screen and (max-width: 1000px) {
@@ -350,7 +345,7 @@ main {
         top: 50rem;
         left: 10px;
     }
-  
+
     /* Stil for første hovedseksjon */
     #main-1 {
         display: grid; /* Bruker grid-layout */
@@ -371,7 +366,6 @@ main {
 
 /* Media query for skjermstørrelser opp til 1000px */
 @media screen and (max-width: 700px) {
-
     /* Stil for bildecontaineren i media query */
     .main__imge--container {
         position: relative;
