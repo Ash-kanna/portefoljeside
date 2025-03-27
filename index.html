@@ -3,19 +3,31 @@
 
 <head>
     <!-- Importerer en Google-font for styling av nettsiden -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
-    </style>
+
     <!-- Setter tegnkoding for dokumentet -->
     <meta charset="UTF-8">
     <!-- Sikrer at siden er responsiv på forskjellige enheter -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="ogevneno">
+    <meta name="keywords" content="Adea">
+    <meta property="og:title" content="Adea's Nettside">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ash-kanna.github.io/portefoljeside/">
+    <meta property="og:image" content="bilder/mhai.png?format=webp">
+    <meta property="og:site_name" content="Adea's nettside">
+
+    <link rel="icon" href="bilder/mhai.png?format=webp" sizes="any">
+    <link rel="apple-touch-icon" href="bilder/mhai.png?format=webp" aria-label="Default">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Tittel på nettsiden som vises i nettleserfanen -->
     <title>Adea's Nettside</title>
     <!-- Kobler til en ekstern CSS-stilark for ekstra styling -->
     <link rel="stylesheet" href="style/style.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!--  Importere ikoner og Material Design  -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap&display=optional&display=fallback" rel="stylesheet">
     <script type="importmap">
         {
           "imports": {
@@ -25,14 +37,10 @@
     </script>
     <script type="module">
         import '@material/web/common.js';
-
-        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-
-        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
 </head>
 
-<body onload="applySavedPreferences()">
+<body>
 <!-- Hovedseksjon som inneholder navigasjonslinjen -->
 <header style="height: 10vh; width: 100%;">
     <div class="navbar">
@@ -42,7 +50,7 @@
             </div>
             <!-- Logo for nettsiden -->
             <div class="navbar__container">
-                <md-icon-button id="usage-anchor"><md-icon>menu</md-icon></md-icon-button>
+                <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
                 <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
 
                     <a href="#main-1" class="navbar__links">
@@ -60,17 +68,12 @@
                         <md-menu-item>
                             <div slot="headline">Kontakt</div>
                         </md-menu-item></a>
-
-                    <md-menu-item>
-                        <div slot="headline">
-                               <span class="navbar__textSize">
-                                   <a>Text Size</a>
-                                   <button class="button2" onclick="changeFontSize('increase')"> + </button>
-                                   <button class="button2" onclick="changeFontSize('decrease')"> - </button>
-                               </span>
-                        </div>
-                    </md-menu-item>
                 </md-menu>
+                <div class="navbar__textSize">
+                    <p style="color: #1b4393;">Text Size</p>
+                    <button class="button2" onclick="changeFontSize('increase')"> + </button>
+                    <button class="button2" onclick="changeFontSize('decrease')"> - </button>
+               </div>
             </div>
         </div>
     </div>
@@ -90,7 +93,7 @@
             <header> </header>
             <!-- Underrubrik for programmeringsspråk -->
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                <h4 id="h4__1">Programmerings språk jeg kan bruke:</h4>
+                <h2 id="h4__1">Språk jeg kan:</h2>
                 <ul id="ul2">
                     <li>Python</li>
                     <li>HTML</li>
@@ -103,7 +106,7 @@
         <section id="main__content">
             <!-- Seksjon for prosjekter -->
             <h2 class="overskrifter" id="prosjekt">Prosjekt</h2>
-            <h4>MHAI</h4>
+            <h2>MHAI</h2>
             <p id="p2"> M.H.A.I er kort for "Mental Healt Artifitial Intelligence".
                 Prosjektet begynnte ved starten av 2025.
                 Hental Healt AI skal bli en AI-chatbot hvor forlk kan prate
@@ -112,6 +115,12 @@
                 Vis du vil lese mer om prosjektet M.H.A.I gå inn på
                 <a href="http://127.0.0.1:5500/Min_nettside/MHAI/Index.html">
                     M.H.A.I.'s offesielle nettside.</a> </p>
+            <section class="main__imge--container">
+                <!-- Bilde-seksjon for å vise en logo -->
+                <picture>
+                    <img loading="lazy" src="bilder/mhai.png" alt="MHAI sin logo"/>
+                </picture>
+            </section>
         </section>
 
         <section id="kontakt">
@@ -123,12 +132,6 @@
     </section>
 
     <div id="main-3">
-        <section class="main__imge--container">
-            <!-- Bilde-seksjon for å vise en logo -->
-            <picture>
-                <img src="bilder/mhai.png" alt="MHAI sin logo" />
-            </picture>
-        </section>
     </div>
 </main>
 
