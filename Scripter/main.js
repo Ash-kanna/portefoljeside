@@ -26,7 +26,6 @@ function changeFontSize(action) {
 
 function applySavedPreferences() {
     const savedFontSize = localStorage.getItem('fontSize');
-    const savedLineHeight = localStorage.getItem('lineHeight');
 
     if (savedFontSize) {
         document.body.style.fontSize = savedFontSize;
