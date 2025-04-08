@@ -228,6 +228,7 @@ img {
         text-align: center; /* Sentrerer teksten */
         margin-bottom: 4rem; /* Legger til margin på bunnen */
     }
+
     .navbar__textSize {
         display: none;
     }
