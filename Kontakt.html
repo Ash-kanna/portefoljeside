@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <!-- Importerer en Google-font for styling av nettsiden -->
+
+    <!-- Setter tegnkoding for dokumentet -->
+    <meta charset="UTF-8">
+    <!-- Sikrer at siden er responsiv på forskjellige enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="ogevneno">
+    <meta name="keywords" content="Adea">
+    <meta property="og:title" content="Adea's Nettside">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ash-kanna.github.io/portefoljeside/">
+    <meta property="og:image" content="bilder/mhai.png?format=webp">
+    <meta property="og:site_name" content="Adea's nettside">
+
+    <link rel="icon" href="bilder/mhai.png?format=webp" sizes="any">
+    <link rel="apple-touch-icon" href="bilder/mhai.png?format=webp" aria-label="Default">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Tittel på nettsiden som vises i nettleserfanen -->
+    <title>Adea's Nettside | portefoljeside | inkludere lit informasjon, prosjekter og mer </title>
+    <!-- Kobler til en ekstern CSS-stilark for ekstra styling -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!--  Importere ikoner og Material Design  -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap&display=optional&display=fallback" rel="stylesheet">
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/common.js';
+    </script>
+</head>
+
+<body>
+<!-- Hovedseksjon som inneholder navigasjonslinjen -->
+<header style="height: 10vh; width: 100%;">
+    <div class="navbar">
+        <div style="margin:0 10px 0 10px; height: inherit; display: flex; align-content:center; width:calc(100% - 20px);">
+            <div class="logo-container">
+                <a id="navbar__logo">Adea's Nettside</a>
+            </div>
+            <!-- Logo for nettsiden -->
+            <div class="navbar__container">
+                <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
+                <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
+
+                    <a href="index.html" class="navbar__links">
+                        <md-menu-item>
+                            <div slot="headline">Hjem</div>
+                        </md-menu-item>
+                    </a>
+
+                    <a href="prosjekt.html" class="navbar__links">
+                        <md-menu-item>
+                            <div slot="headline">Projekter</div>
+                        </md-menu-item></a>
+
+                </md-menu>
+                <div class="navbar__textSize">
+                    <p style="color: #1c438f;">Text Size</p>
+                    <button class="button2" onclick="changeFontSize('increase')"> + </button>
+                    <button class="button2" onclick="changeFontSize('decrease')"> - </button>
+               </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="main__imge--container">
+        <!-- Bilde-seksjon for å vise en logo -->
+        <picture>
+            <img loading="lazy" src="bilder/kontakt.png" alt="MHAI sin logo. Det prosjekte nevnet over (MHAI)."/>
+        </picture>
+    </section>
+
+    <section id="kontakt">
+        <header id="header2"> </header>
+        <!-- Seksjon for kontaktinformasjon -->
+        <h2 class="overskrifter">Kontakt</h2>
+        <p> Opplever du problemer, eller har spørsmål? Ta kontakt med <a href="mailto:adea.hafnor@gmail.com">adea.hafnor@gmail.com</a>, for hjelp eller eventueller forbedringer eller klager.</p>
+    </section>
+</main>
+
+<footer>
+    <!-- Bunntekst med opphavsrettsinformasjon -->
+    <p>&copy; 2025 Min Portefølje.</p>
+</footer>
+<!-- Kobler til en ekstern JavaScript-fil for funksjonalitet -->
+<script type="module" src="Scripter/main.js"></script>
+</body>
+</html>
