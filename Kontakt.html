@@ -49,7 +49,7 @@
             </div>
             <!-- Logo for nettsiden -->
             <div class="navbar__container">
-                <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
+                <md-icon-button id="usage-anchor" aria-label="Contact menu" style=".standard:hover{color:#ffffff;} .standard{color:#ffffff;}"><md-icon style="color: #ffffff;">menu</md-icon></md-icon-button>
                 <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
 
                     <a href="index.html" class="navbar__links">
@@ -65,7 +65,7 @@
 
                 </md-menu>
                 <div class="navbar__textSize">
-                    <p style="color: #1c438f;">Text Size</p>
+                    <p style="color: #ffffff;">Text Size</p>
                     <button class="button2" onclick="changeFontSize('increase')"> + </button>
                     <button class="button2" onclick="changeFontSize('decrease')"> - </button>
                </div>
@@ -73,7 +73,7 @@
         </div>
     </div>
 </header>
-<main>
+<main onload="applySavedPreferences()"style="justify-content: center; align-items: center; padding-bottom:31rem">
     <section class="main__imge--container">
         <!-- Bilde-seksjon for å vise en logo -->
         <picture>

@@ -17,7 +17,7 @@ body {
     font-size: 16px; /* Default font size */
     line-height: 30px; /* Default line height */
     background-color: #fff; /* Default background color */
-    color: #000; /* Default text color */
+    color: #000000; /* Default text color */
     transition: all 0.3s ease; /* Smooth transitions for changes */
     scrollbar-width: none;
 }
@@ -45,8 +45,50 @@ footer {
 nav {
     padding: 2rem;
     display: flex;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
+
+
+.card2 {
+    background-color: rgb(111, 163, 161);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 25rem;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.card-title2 {
+    font-size: 2em;
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+#text {
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
 /* Stil for navigasjonslinjen */
 .navbar {
     display: flex; /* Bruker flexbox for layout */
@@ -54,7 +96,7 @@ nav {
     width: 100%; /* Setter bredden til 100% */
     height: 11vh; /* Høyden tilpasses innholdet */
     top: 0;
-    background-color: rgb(159, 231, 228);
+    background-color: rgb(111, 163, 161);
     position: fixed; /* Fester navigasjonslinjen til toppen av vinduet */
 }
 .logo-container {
@@ -63,14 +105,14 @@ nav {
     align-items: center;
     justify-content: center;
     align-self: center;
-    background-image: linear-gradient(to top, rgb(33, 182, 241) 0%, rgb(0, 0, 0) 100%); /* Setter gradientbakgrunn */
+    background-image: linear-gradient(to top, rgb(33, 182, 241) 0%, rgb(255, 255, 255) 100%); /* Setter gradientbakgrunn */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
     background-clip: text; /* Klipper bakgrunnen til teksten */
     color: transparent;
 }
 /* Stil for logoen i navigasjonslinjen */
 #navbar__logo {
-    background-image: linear-gradient(to top, rgb(15, 110, 148) 0%, rgb(0, 0, 0) 100%); /* Setter gradientbakgrunn */
+    background-image: linear-gradient(to top, rgb(186, 235, 255) 0%, rgb(255, 255, 255) 100%); /* Setter gradientbakgrunn */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
     background-clip: text; /* Klipper bakgrunnen til teksten */
     color: transparent;
@@ -96,7 +138,7 @@ nav {
     align-self: center;
 }
 .navbar__textSize {
-    color: rgb(0, 179, 255); /* Setter tekstfarge */
+    color: rgb(255, 255, 255); /* Setter tekstfarge */
     display: flex; /* Bruker flexbox for layout */
     align-items: center; /* Sentrerer innholdet vertikalt */
     justify-content: center; /* Sentrerer innholdet horisontalt */
@@ -123,22 +165,22 @@ nav {
     border: none; /* Fjerner kantlinje */
     outline: none; /* Fjerner fokusramme */
     border-radius: 10px 0; /* Runding av hjørnene */
-    background: rgb(50, 120, 150); /* Setter bakgrunnsfarge */
-    color: white; /* Setter tekstfarge */
+    background: rgb(198, 238, 255); /* Setter bakgrunnsfarge */
+    color: rgb(0, 0, 0); /* Setter tekstfarge */
 }
 /* Stil for knappen når musen er over den */
 .button2:hover {
-    background: rgb(300, 70, 100); /* Endrer bakgrunnsfarge ved hover */
+    background: rgb(250, 70, 121); /* Endrer bakgrunnsfarge ved hover */
     transition: all 0.3s ease; /* Legger til overgangseffekt */
 }
 /* Stil for lenkene i navigasjonsmenyen når musen er over dem */
 .navbar__links:hover {
-    color: rgb(12, 16, 15); /* Endrer tekstfarge ved hover */
+    color: rgb(255, 255, 255); /* Endrer tekstfarge ved hover */
     transition: all; /* Legger til overgangseffekt */
 }
 /* Grunnleggende stil for body */
 body {
-    background-color: rgb(159, 231, 228); /* Setter bakgrunnsfarge */
+    background-color: rgb(111, 163, 161); /* Setter bakgrunnsfarge */
     min-height: fit-content; /* Setter minimum høyde til innholdets høyde */
     max-height: 100%; /* Setter maksimal høyde */
     min-width: fit-content; /* Setter minimum bredde til innholdets bredde */
@@ -148,10 +190,17 @@ body {
 .main__content {
     width: 100%; /* Setter bredden til 100% */
     min-height: fit-content; /* Setter minimum høyde til innholdets høyde */
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 /* Stil for main-elementet */
 main {
     display: flex; /* Bruker flexbox for layout */
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: 10px; /* Legger til margin rundt main-elementet */
     height: auto; /* Høyden tilpasses innholdet */
     background-color: rgb(233, 254, 255); /* Setter bakgrunnsfarge til hvit */
@@ -159,31 +208,156 @@ main {
     width: calc(100% - 60px); /* Setter bredden til 100% */
     max-height: 1500px; /* Setter maksimal høyde */
     padding: 20px; /* Legger til padding */
-    padding-bottom: 40rem;
+    padding-bottom: 19rem;
 }
 /* Stil for første hovedseksjon */
 #main-1 {
     display: block; /* Bruker block-layout */
     flex: 5%; /* Setter fleksibilitet */
     align-content: center;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
 }
 /* Stil for andre hovedseksjon */
 #main-2 {
-    display: grid;
-    flex: 24rem;
-    flex-direction: column; /* Setter retning til kolonne */
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: fit-content;
+    flex-direction: row;
     align-items: center; /* Sentrerer innholdet horisontalt */
+    justify-self: center; /* Sentrerer innholdet vertikalt */
+    justify-content: center;
+    text-align: center; /* Sentrerer teksten */
+    background-size: 100%; /* Setter bakgrunnsstørrelse */
+}
+
+#main-3 {
+    display: grid; /* Bruker frid-layout */
+    flex: 10rem; /* Setter fleksibilitet */
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; /* Setter retning til kolonne */
     justify-self: center; /* Sentrerer innholdet vertikalt */
     text-align: center; /* Sentrerer teksten */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
+    position: relative;
+    height: -10vh;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+}
+.container .drop{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+                25px 35px 20px rgba(0,0,0,0.05),
+                25px 20px 20px rgba(0, 0, 0, 0.05),
+                inset 25px 30px 30px rgba(255, 255, 255, 0.9);
+    animation: slide 3s linear;
+}
+.container .drop:nth-child(1){
+    border-radius: 67% 33% 28% 72% / 59% 52% 48% 41% ;
+    margin: 20px 30px 30px 0;
+}
+.container .drop:nth-child(2){
+    border-radius: 15% 85% 53% 47% / 55% 41% 59% 45%  ;
+}
+.container .drop::before{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffffc8;
+    top: 50px;
+    left: 80px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.container .drop::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffffc8;
+    top: 90px;
+    left: 110px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.container .drop .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px 60px;
+    gap: 15px;
+}
+.container .drop .content h2{
+    margin-bottom: 15px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--clr);
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
+                inset -2px -5px 10px rgba(255,255,255,1),
+                15px 15px 10px rgba(0,0,0,0.05),
+                15px 10px 15px rgba(0,0,0,0.25);
+}
+.container .drop .content a{
+    position: relative;
+    padding: 10px 20px;
+    background-color: var(--clr);
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 2px 5px 5px rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
+                inset -2px -5px 10px rgba(255,255,255,0.1),
+                10px 10px 5px rgba(0,0,0,0.05),
+                10px 10px 5px rgba(0,0,0,0.25);
+}
+.container .drop .content a:hover{
+    background-color: #fff;
+    color: var(--clr);
+}
+
+/* -----Media Query----- */
+
+@media only screen and (max-width:800px) {
+    .container .drop{
+        width: 275px;
+        height: 275px;
+    }
+}
+@media only screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+    }
 }
 
 /* Stil for overskrifter */
 .overskrifter {
     font-size: 3rem; /* Setter fontstørrelse til 3rem */
     background-color: aliceblue; /* Setter bakgrunnsfarge til aliceblue */
-    background-image: linear-gradient(to top, rgb(0, 195, 255) 0%, rgb(7, 64, 68) 70%); /* Setter gradientbakgrunn */
+    background-image: linear-gradient(to top, rgb(0, 195, 255) 0%, rgb(0, 0, 0) 70%); /* Setter gradientbakgrunn */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
     background-clip: text; /* Klipper bakgrunnen til teksten */
     color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
@@ -199,20 +373,10 @@ main {
     justify-self: center; /* Sentrerer innholdet horisontalt (gjelder ikke her, men kan være nyttig i grid) */
 }
 /* Stil for containeren som inneholder bilder */
-.main__imge--container{
-    justify-self: center;
-    justify-content: center;
-    justify-items: center;
-}
-
-
-#text {
-    justify-self: center;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    text-align: center;
+.main__imge--container {
     display: block; /* Bruker blokkvisning */
+    height: 15rem; /* Setter høyden til 100% av foreldreelementet */
+    width: 20rem; /* Setter bredden til 100% av foreldreelementet */
 }
 
 img {
@@ -237,7 +401,6 @@ img {
         text-align: center; /* Sentrerer teksten */
         margin-bottom: 4rem; /* Legger til margin på bunnen */
     }
-
     .navbar__textSize {
         display: none;
     }
@@ -248,19 +411,10 @@ img {
         background-color: #000000; /* Setter bakgrunnsfarge til svart */
         color: rgb(255, 255, 255); /* Setter tekstfarge til hvit */
     }
-
-    /* Stil for første hovedseksjon */
-
-    #main-2 {
-        display: grid;
-        flex: 150rem;
-    }
 }
 
 @media screen and (max-width: 650px) {
-    img {
-        width: 200px;
-    }
+
     #main-1 {
         width: 200px;
     }
@@ -268,9 +422,7 @@ img {
 
 /* Media query for skjermstørrelser opp til 350px */
 @media screen and (max-width: 350px) {
-    img {
-        width: 140px;
-    }
+
 
     #main-1 {
         width: 140px;

@@ -50,7 +50,7 @@
             </div>
             <!-- Logo for nettsiden -->
             <div class="navbar__container">
-                <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
+                <md-icon-button id="usage-anchor" aria-label="Contact menu" style=".standard:hover{color:#ffffff;} .standard{color:#ffffff;}"><md-icon style="color: #ffffff;">menu</md-icon></md-icon-button>
                 <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
 
                     <a href="prosjekt.html" class="navbar__links">
@@ -64,7 +64,7 @@
                         </md-menu-item></a>
                 </md-menu>
                 <div class="navbar__textSize">
-                    <p style="color: #1c438f;">Text Size</p>
+                    <p style="color: #ffffff;">Text Size</p>
                     <button class="button2" onclick="changeFontSize('increase')"> + </button>
                     <button class="button2" onclick="changeFontSize('decrease')"> - </button>
                </div>
@@ -72,23 +72,23 @@
         </div>
     </div>
 </header>
-<main>
-       
-
+<main style="justify-content: space-evenly; justify-self: center; align-items: center;">
     <section class="main__content" id="main-2">
         <section>
             <!-- Seksjon for informasjon om meg (adea) -->
-            <h2 class="overskrifter">Om meg</h2>
-            <p>
-                Jeg heter Adea, og er 16 år gammel. Jeg er intresert i web- og
-                andre IT-utvikklingsrelaterte ting. Går nå på Hønefoss vgs for å utdanne
-                meg innenfor IT-utvikkling.
-            </p>
-            <header> </header>
+             <div class="card2">
+                <h2 id="h4__1" class="card-title2">Om meg</h2>
+                <p class="card-text">
+                    Jeg heter Adea, og er 16 år gammel. Jeg er intresert i web- og
+                    andre IT-utvikklingsrelaterte ting. Går nå på Hønefoss vgs for å utdanne
+                    meg innenfor IT-utvikkling.
+                </p>
+             </div>
+            
             <!-- Underrubrik for programmeringsspråk -->
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                <h2 id="h4__1">Språk jeg kan:</h2>
-                <ul id="ul2">
+            <div class="card2" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                <h2 id="h4__1" class="card-title">Språk jeg kan:</h2>
+                <ul class="card-text" id="ul2">
                     <li>Python</li>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -100,7 +100,7 @@
         <section class="main__imge--container">
             <!-- Bilde-seksjon for å vise en logo -->
             <picture>
-                <img loading="lazy" src="bilder/MentalHAI-logo.png" alt="MHAI sin logo. Det prosjekte nevnet over (MHAI)."/>
+                <img loading="lazy" src="bilder/A.png" alt="Adea sin logo. En stor A i en blå boble"/>
             </picture>
         </section>
 </main>
