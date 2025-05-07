@@ -65,14 +65,9 @@ nav {
 }
 
 .card-title {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0 0 10px;
-    color: #ffffff;
-}
-
-.card-title2 {
-    font-size: 2em;
-    margin: 0 0 10px;
+    line-height: normal;
     color: #ffffff;
 }
 
@@ -208,7 +203,7 @@ main {
     width: calc(100% - 60px); /* Setter bredden til 100% */
     max-height: 1500px; /* Setter maksimal høyde */
     padding: 20px; /* Legger til padding */
-    padding-bottom: 19rem;
+    padding-bottom: 6.1rem;
 }
 /* Stil for første hovedseksjon */
 #main-1 {
@@ -232,16 +227,11 @@ main {
 }
 
 #main-3 {
-    display: grid; /* Bruker frid-layout */
-    flex: 10rem; /* Setter fleksibilitet */
-    align-content: center;
+    display: flex;
+    flex: 5%;
+    width: 30rem;
     justify-content: center;
-    flex-direction: column; /* Setter retning til kolonne */
-    justify-self: center; /* Sentrerer innholdet vertikalt */
-    text-align: center; /* Sentrerer teksten */
-    background-size: 100%; /* Setter bakgrunnsstørrelse */
-    position: relative;
-    height: -10vh;
+    flex-direction: row-reverse;
 }
 
 .container{
@@ -375,7 +365,7 @@ main {
 /* Stil for containeren som inneholder bilder */
 .main__imge--container {
     display: block; /* Bruker blokkvisning */
-    height: 15rem; /* Setter høyden til 100% av foreldreelementet */
+    height: 2rem; /* Setter høyden til 100% av foreldreelementet */
     width: 20rem; /* Setter bredden til 100% av foreldreelementet */
 }
 
@@ -414,7 +404,9 @@ img {
 }
 
 @media screen and (max-width: 650px) {
-
+    img {
+        width: 200px;
+    }
     #main-1 {
         width: 200px;
     }
@@ -422,7 +414,9 @@ img {
 
 /* Media query for skjermstørrelser opp til 350px */
 @media screen and (max-width: 350px) {
-
+    img {
+        width: 140px;
+    }
 
     #main-1 {
         width: 140px;
