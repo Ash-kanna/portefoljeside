@@ -2,14 +2,13 @@
 <html lang="no">
 
 <head>
-    <!-- Importerer en Google-font for styling av nettsiden -->
-
     <!-- Setter tegnkoding for dokumentet -->
     <meta charset="UTF-8">
     <!-- Sikrer at siden er responsiv på forskjellige enheter -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="ogevneno">
-    <meta name="keywords" content="Adea">
+    <meta name="keywords" content="portefoljeside">
     <meta property="og:title" content="Adea's Nettside">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ash-kanna.github.io/portefoljeside/">
@@ -18,12 +17,13 @@
 
     <link rel="icon" href="bilder/A.png?format=webp" sizes="any">
     <link rel="apple-touch-icon" href="bilder/A.png?format=webp" aria-label="Default">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffff">
 
     <!-- Tittel på nettsiden som vises i nettleserfanen -->
-    <title>Adea's Nettside | portefoljeside | inkludere lit informasjon, prosjekter og mer </title>
+    <title>Adea's Nettside | Informasjon om Adea's prosjekter </title>
     <!-- Kobler til en ekstern CSS-stilark for ekstra styling -->
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="kontakt.html">
 
     <!--  Importere ikoner og Material Design  -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap&display=optional&display=fallback" rel="stylesheet">
@@ -38,40 +38,101 @@
         import '@material/web/common.js';
     </script>
 </head>
-
 <body>
-<!-- Hovedseksjon som inneholder navigasjonslinjen -->
-<header style="height: 10vh; width: 100%;">
-    <div class="navbar">
-        <div style="margin:0 10px 0 10px; height: inherit; display: flex; align-content:center; width:calc(100% - 20px);">
-            <div class="logo-container">
-                <a id="navbar__logo">Adea's Nettside</a>
-            </div>
-            <!-- Logo for nettsiden -->
-            <div class="navbar__container">
-                <md-icon-button id="usage-anchor" aria-label="Contact menu" style=".standard:hover{color:#ffffff;} .standard{color:#ffffff;}"><md-icon style="color: #ffffff;">menu</md-icon></md-icon-button>
-                <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
-                   
-                    <a href="index.html" class="navbar__links">
-                        <md-menu-item>
-                            <div slot="headline">Hjem</div>
-                        </md-menu-item>
-                    </a>
 
-                    <a href="Kontakt.html" class="navbar__links">
-                        <md-menu-item>
-                            <div slot="headline">Kontakt</div>
-                        </md-menu-item></a>
-                </md-menu>
-                <div class="navbar__textSize">
-                    <p style="color: #ffffff;">Text Size</p>
-                    <button class="button2" onclick="changeFontSize('increase')"> + </button>
-                    <button class="button2" onclick="changeFontSize('decrease')"> - </button>
-               </div>
+    <!-- Hovedseksjon som inneholder navigasjonslinjen -->
+    <header style="height: 10vh; width: 100%;">
+        <div class="navbar">
+            <div style="margin:0 10px 0 10px; height: inherit; display: flex; align-content:center; width:calc(100% - 20px);">
+                <div class="logo-container">
+                    <a id="navbar__logo">Adea's Nettside</a>
+                </div>
+                <!-- Logo for nettsiden -->
+                <div class="navbar__container">
+                    <md-icon-button id="usage-anchor" aria-label="Contact menu" style=".standard:hover{color:#ffffff;} .standard{color:#ffffff;}"><md-icon style="color: #ffffff;">menu</md-icon></md-icon-button>
+                    <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
+
+                        <a href="index.html" class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Hjem</div>
+                            </md-menu-item></a>
+    
+                        <a href="prosjekt.html" class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Prosjekter</div>
+                            </md-menu-item></a>
+
+                    </md-menu>
+                    <div class="navbar__textSize">
+                        <p style="color: #ffffff;">Text Size</p>
+                        <div class="controls" style="display: flex; flex-direction: row;">
+                            <button class="button2" onclick="changeFontSize('decrease'), changeFontL('decrease')">-</button>
+                            <button class="button2" onclick="changeFontSize('increase'), changeFontL('increase')">+</button>
+                        </div>
+                   </div>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+    
+        <script>
+            
+            function changeFontSize(action) {
+                const body = document.body;
+                const currentSize = window.getComputedStyle(body).fontSize;
+                let newSize = parseFloat(currentSize);
+            
+                if (action === 'increase') {
+                    newSize += 2; // Øk med 2 piksler
+                } else if (action === 'decrease') {
+                    newSize -= 2; // Reduser med 2 piksler
+                }
+            
+                // Begrens minimum og maksimum fontstørrelse
+                if (newSize < 8) newSize = 8;
+                if (newSize > 50) newSize = 50;
+            
+                body.style.fontSize = newSize + 'px';
+                localStorage.setItem('fontSize', newSize + 'px'); // Lagre tekststørrelse
+            }
+            
+            function applySavedPreferences() {
+                const savedFontSize = localStorage.getItem('fontSize');
+            
+                if (savedFontSize) {
+                    document.body.style.fontSize = savedFontSize;
+                }
+            }
+            
+            function changeFontL(action) {
+                const body = document.body;
+                const currentLength = window.getComputedStyle(body).lineHeight;
+                let newHeight = parseFloat(currentLength);
+            
+                if (action === 'increase') {
+                    newHeight += 5; // Increase by 5 pixels
+                } else if (action === 'decrease') {
+                    newHeight -= 2; // Decrease by 5 pixels
+                }
+            
+                // Limit minimum and maximum line height
+                if (newHeight <30) newHeight = 30;
+                if (newHeight > 40) newHeight = 40;
+            
+                body.style.lineHeight = newHeight + 'px'; // Set the new line height
+                localStorage.setItem('lineHeight', newHeight + 'px'); // Save line height
+            }
+            
+            function applySavedPreferences() {
+                const savedFontLength = localStorage.getItem('lineHeight');
+            
+                if (savedFontLength) {
+                    document.body.style.lineHeight = savedFontLength; // Apply saved line height
+                }
+            }
+        </script>
+        </body>
+        <html>
 <main onload="applySavedPreferences()"style="justify-content: center; align-items: center; padding-bottom:23rem">
     <!-- Hovedinnholdsområde -->
     <div id="main-2">
@@ -86,7 +147,7 @@
         <!-- Seksjon for prosjekt -->
             <h2 class="overskrifter" id="prosjekt">Prosjekt</h2>
             <h2>MHAI</h2>
-            <p id="p2"> M.H.A.I er kort for "Mental Health Artifitial Intelligence".
+            <p id="p2" class="card-text" style="color: black;"> M.H.A.I er kort for "Mental Health Artifitial Intelligence".
                 Prosjektet begynnte ved starten av 2025.
                 Hental Healt AI skal bli en AI-chatbot hvor forlk kan prate
                 med AI-en om hvordan de føler seg og få tips og råd som en/fler
@@ -96,7 +157,7 @@
         <section id="main__content">
             <div class="drop" style="--clr:rgb(111, 163, 161);">
                 <div class="content">
-                    <h2>1</h2>
+                    <h2 style="font-size: 2.5rem;">1</h2>
                     <p>        Vis du vil lese mer om prosjekt gå inn på denne nettsiden</p>
                     <a href="https://ash-kanna.github.io/MHAI/">MHAI's nettside</a> 
                 </div>
