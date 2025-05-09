@@ -14,6 +14,7 @@ body {
     height: max-content; /* Setter høyden til innholdets høyde */
     margin: 0; /* Fjerner standard margin */
     padding: 0; /* Fjerner standard padding */
+    overflow-x: hidden;
     font-size: 16px; /* Default font size */
     line-height: 30px; /* Default line height */
     background-color: #fff; /* Default background color */
@@ -401,6 +402,7 @@ img {
         background-color: #000000; /* Setter bakgrunnsfarge til svart */
         color: rgb(255, 255, 255); /* Setter tekstfarge til hvit */
     }
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -410,6 +412,7 @@ img {
     #main-1 {
         width: 200px;
     }
+
 }
 
 /* Media query for skjermstørrelser opp til 350px */
